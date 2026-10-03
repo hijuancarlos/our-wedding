@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selene & Juan Carlos - Wedding Invitation</title>
+    <title>Selene & Juan Carlos - Nuestra Boda</title>
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Playfair Display, Inter, Great Vibes, Libre Baskerville -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -19,132 +20,199 @@
                 extend: {
                     colors: {
                         gold: {
+                            50: '#FAF7F0',
                             100: '#f4f0e2',
                             200: '#e6dabf',
                             300: '#d5bf95',
+                            400: '#c2a36b',
                             500: '#b08848',
                             600: '#946d3a',
+                            700: '#75532a',
                         },
-                        blush: '#fcf6f5'
+                        blush: {
+                            DEFAULT: '#fcf6f5',
+                            50: '#FFFDFD',
+                            100: '#FAF0EE',
+                            200: '#F5E2DE',
+                        }
                     },
                     fontFamily: {
-                        serif: ['Cormorant Garamond', 'serif'],
-                        sans: ['Montserrat', 'sans-serif'],
-                        cursive: ['Great Vibes', 'cursive']
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        cursive: ['Great Vibes', 'cursive'],
+                        ampersand: ['Libre Baskerville', 'serif']
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-blush text-stone-800 font-sans antialiased">
+<body class="bg-blush text-stone-800 font-sans antialiased selection:bg-gold-200 selection:text-stone-900">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-gold-100">
-        <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="#home" class="font-cursive text-2xl text-gold-600 font-semibold">S & Jc</a>
-            <div class="flex space-x-6 font-sans text-xs uppercase tracking-widest text-stone-600 font-medium">
-                <a href="#home" class="hover:text-gold-500 transition-colors">Inicio</a>
-                <a href="#countdown" class="hover:text-gold-500 transition-colors">Cuenta Regresiva</a>
-                <a href="#details" class="hover:text-gold-500 transition-colors">Detalles</a>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md border-b border-gold-200/60 transition-all duration-300">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#home" class="font-serif text-xl sm:text-2xl text-gold-600 font-semibold tracking-wide hover:opacity-80 transition-opacity">
+                S <span class="font-ampersand italic text-gold-500 font-normal">&</span> J
+            </a>
+            
+            <div class="flex space-x-6 sm:space-x-8 font-sans text-xs uppercase tracking-widest text-stone-600 font-medium">
+                <a href="#home" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500">Inicio</a>
+                <a href="#countdown" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500">Cuenta Regresiva</a>
+                <a href="#details" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500">Detalles</a>
+                <a href="#location" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500">Ubicación</a>
             </div>
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="min-h-screen relative flex items-center justify-center pt-16 px-4 text-center">
-        <div class="max-w-2xl mx-auto flex flex-col items-center">
-            <p class="font-serif italic text-xl text-gold-600 mb-2">Nos Casamos</p>
-            <h1 class="font-serif text-5xl sm:text-7xl text-stone-800 tracking-tight my-4">
-                Selene <span class="font-cursive text-gold-500 text-6xl sm:text-8xl">&</span> Juan Carlos
+    <section id="home" class="min-h-screen relative flex items-center justify-center pt-20 pb-12 px-4 text-center overflow-hidden">
+        <!-- Subtle background decorative elements -->
+        <div class="absolute inset-0 pointer-events-none opacity-40 bg-[radial-gradient(#d5bf95_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-gold-100/50 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-blush-200/50 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-3xl mx-auto flex flex-col items-center relative z-10">
+            <p class="font-cursive text-3xl sm:text-4xl text-gold-600 mb-1">Nos casamos</p>
+            <span class="text-xs uppercase tracking-[0.3em] text-stone-500 mb-6 font-medium">Invitación Especial</span>
+            
+            <h1 class="font-serif text-5xl sm:text-7xl md:text-8xl text-stone-800 tracking-tight my-2 leading-none">
+                Selene <span class="font-ampersand italic text-gold-500 text-4xl sm:text-6xl md:text-7xl align-middle mx-1 font-normal">&</span> Juan Carlos
             </h1>
-            <div class="w-16 h-0.5 bg-gold-300 my-6"></div>
-            <p class="font-serif text-xl sm:text-2xl text-stone-700 tracking-wider mb-2 uppercase">
-                Sabado, Abril 22, 2028
+            
+            <div class="flex items-center space-x-4 my-8">
+                <div class="w-12 sm:w-20 h-px bg-gold-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gold-500"></div>
+                <div class="w-12 sm:w-20 h-px bg-gold-300"></div>
+            </div>
+
+            <p class="font-serif text-xl sm:text-3xl text-stone-700 tracking-wide mb-2">
+                Sábado, 22 de Abril de 2028
             </p>
-            <p class="text-stone-500 text-xs sm:text-sm tracking-widest uppercase mb-8">
-                Puebla, Puebla.
+            <p class="text-stone-500 text-xs sm:text-sm tracking-[0.25em] uppercase mb-10 font-medium">
+                Puebla, Puebla, México
             </p>
-            <a href="#details" class="bg-gold-500 hover:bg-gold-600 text-white font-sans text-xs uppercase tracking-widest px-8 py-3 rounded-full shadow transition-all">
-                Detalles
+
+            <a href="#details" class="bg-gold-500 hover:bg-gold-600 text-white font-sans text-xs uppercase tracking-widest px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 font-medium">
+                Ver Detalles del Evento
             </a>
         </div>
     </section>
 
-    <!-- Countdown Section -->
-    <section id="countdown" class="py-20 bg-white border-y border-gold-100">
+    <section id="countdown" class="py-20 bg-white border-y border-gold-100 relative">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="font-serif text-3xl text-stone-800 mb-2 italic">Cuenta Regresiva para nuesto Día Especial</h2>
-            <p class="text-xs uppercase tracking-widest text-gold-600 mb-10">April 22, 2028</p>
+            <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mb-2">Cuenta Regresiva</h2>
+            <p class="text-xs uppercase tracking-widest text-gold-600 mb-12 font-medium">22 de Abril de 2028 • 16:00 HRS</p>
             
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
-                <div class="bg-blush p-6 rounded-2xl border border-gold-200">
-                    <span id="days" class="font-serif text-4xl sm:text-5xl text-stone-800">00</span>
-                    <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2">Dias</span>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto">
+                <div class="bg-blush p-6 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
+                    <span id="days" class="font-serif text-4xl sm:text-6xl text-stone-800 font-normal">00</span>
+                    <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2 font-medium">Días</span>
                 </div>
-                <div class="bg-blush p-6 rounded-2xl border border-gold-200">
-                    <span id="hours" class="font-serif text-4xl sm:text-5xl text-stone-800">00</span>
-                    <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2">Horas</span>
+                <div class="bg-blush p-6 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
+                    <span id="hours" class="font-serif text-4xl sm:text-6xl text-stone-800 font-normal">00</span>
+                    <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2 font-medium">Horas</span>
                 </div>
-                <div class="bg-blush p-6 rounded-2xl border border-gold-200">
-                    <span id="minutes" class="font-serif text-4xl sm:text-5xl text-stone-800">00</span>
-                    <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2">Minutos</span>
+                <div class="bg-blush p-6 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
+                    <span id="minutes" class="font-serif text-4xl sm:text-6xl text-stone-800 font-normal">00</span>
+                    <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2 font-medium">Minutos</span>
                 </div>
-                <div class="bg-blush p-6 rounded-2xl border border-gold-200">
-                    <span id="seconds" class="font-serif text-4xl sm:text-5xl text-stone-800">00</span>
-                    <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2">Segundos</span>
+                <div class="bg-blush p-6 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
+                    <span id="seconds" class="font-serif text-4xl sm:text-6xl text-stone-800 font-normal">00</span>
+                    <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2 font-medium">Segundos</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Event Details Section -->
     <section id="details" class="py-20 bg-blush">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <p class="font-cursive text-3xl text-gold-600">Acompañanos</p>
-                <h2 class="font-serif text-4xl text-stone-800">Detalles</h2>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <p class="font-cursive text-3xl sm:text-4xl text-gold-600">Acompáñanos en nuestro día</p>
+                <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mt-1">Detalles del Evento</h2>
                 <div class="w-16 h-0.5 bg-gold-300 mx-auto mt-4"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Ceremony -->
-                <div class="bg-white p-8 rounded-3xl border border-gold-200 text-center">
-                    <div class="w-12 h-12 rounded-full bg-gold-100 text-gold-600 flex items-center justify-center text-xl mx-auto mb-4">
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Ceremony Card -->
+                <div class="bg-white p-8 sm:p-10 rounded-3xl border border-gold-200/90 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-gold-100/70 text-gold-600 flex items-center justify-center text-2xl mb-6 shadow-inner">
                         <i class="fa-solid fa-church"></i>
                     </div>
-                    <h3 class="font-serif text-2xl text-stone-800 mb-2">La Ceremonia</h3>
-                    <p class="text-gold-600 font-medium text-xs tracking-widest uppercase mb-4">4:00 PM</p>
-                    <p class="text-stone-600 text-sm leading-relaxed">
-                        Capilla<br>
-                        Puebla, Puebla
+                    <h3 class="font-serif text-3xl text-stone-800 mb-2">La Ceremonia</h3>
+                    <p class="text-gold-600 font-semibold text-xs tracking-[0.2em] uppercase mb-6 bg-gold-50 px-4 py-1.5 rounded-full border border-gold-200">
+                        4:00 PM
                     </p>
+                    <p class="text-stone-700 text-base leading-relaxed mb-6 font-normal">
+                        <strong class="text-stone-900 font-semibold">Capilla de la Misión</strong><br>
+                        Centro Histórico, Puebla, Pue.
+                    </p>
+                    <p class="text-stone-500 text-xs leading-relaxed mb-8">
+                        Favor de llegar 15 minutos antes del inicio de la misa.
+                    </p>
+                    <a href="#location" class="mt-auto inline-flex items-center text-xs font-semibold uppercase tracking-widest text-gold-600 hover:text-gold-700 transition-colors group">
+                        Ver ubicación <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
                 </div>
 
-                <!-- Reception -->
-                <div class="bg-white p-8 rounded-3xl border border-gold-200 text-center">
-                    <div class="w-12 h-12 rounded-full bg-gold-100 text-gold-600 flex items-center justify-center text-xl mx-auto mb-4">
+                <!-- Reception Card -->
+                <div class="bg-white p-8 sm:p-10 rounded-3xl border border-gold-200/90 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-gold-100/70 text-gold-600 flex items-center justify-center text-2xl mb-6 shadow-inner">
                         <i class="fa-solid fa-glass-cheers"></i>
                     </div>
-                    <h3 class="font-serif text-2xl text-stone-800 mb-2">La Recepcción</h3>
-                    <p class="text-gold-600 font-medium text-xs tracking-widest uppercase mb-4">6:00 PM</p>
-                    <p class="text-stone-600 text-sm leading-relaxed">
-                        Jardín<br>
-                        Puebla, Puebla
+                    <h3 class="font-serif text-3xl text-stone-800 mb-2">La Recepción</h3>
+                    <p class="text-gold-600 font-semibold text-xs tracking-[0.2em] uppercase mb-6 bg-gold-50 px-4 py-1.5 rounded-full border border-gold-200">
+                        6:00 PM
                     </p>
+                    <p class="text-stone-700 text-base leading-relaxed mb-6 font-normal">
+                        <strong class="text-stone-900 font-semibold">Jardín Las Fuentes</strong><br>
+                        Zona Ángelópolis, Puebla, Pue.
+                    </p>
+                    <p class="text-stone-500 text-xs leading-relaxed mb-8">
+                        Código de Vestimenta: Etiqueta Rígida / Formal.
+                    </p>
+                    <a href="#location" class="mt-auto inline-flex items-center text-xs font-semibold uppercase tracking-widest text-gold-600 hover:text-gold-700 transition-colors group">
+                        Ver ubicación <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-8 bg-white text-center border-t border-gold-100">
-        <p class="font-cursive text-2xl text-gold-600">Selene & Juan Carlos</p>
-        <p class="text-xs text-stone-400 tracking-widest uppercase mt-1">Abril 22, 2028</p>
+    <section id="location" class="py-20 bg-white border-t border-gold-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <p class="font-cursive text-3xl sm:text-4xl text-gold-600">¿Cómo llegar?</p>
+                <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mt-1">Ubicación y Mapa</h2>
+                <div class="w-16 h-0.5 bg-gold-300 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Responsive Embed Map Container -->
+            <div class="rounded-3xl overflow-hidden border border-gold-200 shadow-md mb-8 h-96 relative bg-stone-100">
+                <iframe 
+                    title="Mapa de Puebla" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120638.12213797825!2d-98.28318621404172!3d19.043343360210204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc0c410313271%3A0xe21287e0fa0c1e40!2sPuebla%2C%20Pue.%2C%20Mexico!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" 
+                    class="w-full h-full border-0" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+                <a href="https://maps.google.com/?q=Puebla+Mexico" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center bg-stone-800 hover:bg-stone-900 text-white font-sans text-xs uppercase tracking-widest px-6 py-3 rounded-full shadow transition-all">
+                    <i class="fa-map-location-dot fa-solid mr-2 text-gold-300"></i> Abrir en Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-blush text-center border-t border-gold-100">
+        <p class="font-serif text-3xl text-gold-600">Selene <span class="font-ampersand italic text-2xl text-gold-500">&</span> Juan Carlos</p>
+        <p class="text-xs text-stone-400 tracking-widest uppercase mt-2 font-medium">22 de Abril de 2028 • Puebla, México</p>
+        <p class="text-[10px] text-stone-300 uppercase tracking-widest mt-6">Con mucho amor</p>
     </footer>
 
-    <!-- Countdown Logic -->
     <script>
+        // Target wedding date: April 22, 2028, 16:00:00
         const targetDate = new Date('April 22, 2028 16:00:00').getTime();
 
         function updateCountdown() {
