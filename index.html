@@ -55,11 +55,12 @@
                 S <span class="font-ampersand italic text-gold-500 font-normal">&</span> J
             </a>
             
-            <div class="flex space-x-6 sm:space-x-8 font-sans text-xs uppercase tracking-widest text-stone-600 font-medium">
-                <a href="#home" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500">Inicio</a>
-                <a href="#countdown" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500">Cuenta Regresiva</a>
-                <a href="#details" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500">Detalles</a>
-                <a href="#location" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500">Ubicación</a>
+            <div class="flex space-x-4 sm:space-x-8 font-sans text-xs uppercase tracking-widest text-stone-600 font-medium overflow-x-auto py-2">
+                <a href="#home" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Inicio</a>
+                <a href="#countdown" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Cuenta Regresiva</a>
+                <a href="#history" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Nuestra Historia</a>
+                <a href="#details" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Detalles</a>
+                <a href="#location" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Ubicación</a>
             </div>
         </div>
     </nav>
@@ -119,6 +120,30 @@
                     <span id="seconds" class="font-serif text-4xl sm:text-6xl text-stone-800 font-normal">00</span>
                     <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2 font-medium">Segundos</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Nuestra Historia -->
+    <section id="history" class="py-20 bg-blush border-b border-gold-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <p class="font-cursive text-3xl sm:text-4xl text-gold-600">Un recorrido juntos</p>
+                <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mt-1">Nuestra Historia</h2>
+                <div class="w-16 h-0.5 bg-gold-300 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Video Container con Responsive Aspect Ratio -->
+            <div class="rounded-3xl overflow-hidden border border-gold-200/90 shadow-lg bg-black aspect-video w-full max-w-3xl mx-auto">
+                <iframe 
+                    class="w-full h-full"
+                    src="https://www.youtube.com/embed/NZGHXy1IAHM?si=Imi38O_00KRAWdat" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
     </section>
