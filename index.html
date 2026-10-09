@@ -58,7 +58,7 @@
             <div class="flex space-x-4 sm:space-x-8 font-sans text-xs uppercase tracking-widest text-stone-600 font-medium overflow-x-auto py-2">
                 <a href="#home" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Inicio</a>
                 <a href="#countdown" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Cuenta Regresiva</a>
-                <a href="#history" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Nuestra Historia</a>
+                <a href="#history" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Nuestra Canción</a>
                 <a href="#details" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Detalles</a>
                 <a href="#location" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Ubicación</a>
             </div>
@@ -129,21 +129,23 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-12">
                 <p class="font-cursive text-3xl sm:text-4xl text-gold-600">Un recorrido juntos</p>
-                <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mt-1">Nuestra Historia</h2>
+                <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mt-1">Nuestra Canción</h2>
                 <div class="w-16 h-0.5 bg-gold-300 mx-auto mt-4"></div>
             </div>
+            <!-- Native Audio Card Container -->
+            <div class="bg-white p-8 rounded-3xl border border-gold-200/90 shadow-md flex flex-col items-center text-center max-w-xl mx-auto">
+                <div class="w-16 h-16 rounded-full bg-gold-100/70 text-gold-600 flex items-center justify-center text-2xl mb-4 shadow-inner">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+                
+                <h3 class="font-serif text-2xl text-stone-800 mb-1">A Thousand Years</h3>
+                <p class="text-stone-500 text-xs uppercase tracking-widest mb-6 font-medium">Música de fondo</p>
 
-            <!-- Video Container con Responsive Aspect Ratio -->
-            <div class="rounded-3xl overflow-hidden border border-gold-200/90 shadow-lg bg-black aspect-video w-full max-w-3xl mx-auto">
-                <iframe 
-                    class="w-full h-full"
-                    src="https://www.youtube.com/embed/NZGHXy1IAHM?si=Imi38O_00KRAWdat&autoplay=1" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-                </iframe>
+                <audio controls autoplay loop class="w-full max-w-md accent-gold-500">
+                    <source src="music/A-Thousand-Years.m4a.m4a" type="audio/mp4">
+                    <source src="music/A-Thousand-Years.m4a.m4a" type="audio/x-m4a">
+                    Tu navegador no soporta el reproductor de audio.
+                </audio>
             </div>
         </div>
     </section>
