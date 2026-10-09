@@ -49,6 +49,20 @@
 </head>
 <body class="bg-blush text-stone-800 font-sans antialiased selection:bg-gold-200 selection:text-stone-900">
 
+    <!-- WELCOME MODAL: Required for browser autoplay policies -->
+    <div id="welcomeModal" class="fixed inset-0 z-[100] bg-blush/95 backdrop-blur-md flex flex-col items-center justify-center text-center p-6 transition-opacity duration-700">
+        <div class="max-w-md bg-white p-8 sm:p-10 rounded-3xl border border-gold-200 shadow-xl flex flex-col items-center">
+            <p class="font-cursive text-3xl text-gold-600 mb-1">Bienvenidos</p>
+            <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mb-4">Selene <span class="font-ampersand italic text-gold-500 font-normal">&</span> Juan Carlos</h2>
+            <div class="w-12 h-0.5 bg-gold-300 mx-auto mb-6"></div>
+            <p class="text-stone-500 text-xs uppercase tracking-widest mb-8 font-medium">Te invitamos a celebrar con nosotros</p>
+            
+            <button id="enterSiteBtn" class="bg-gold-500 hover:bg-gold-600 text-white font-sans text-xs uppercase tracking-widest px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 font-medium flex items-center gap-2">
+                <i class="fa-solid fa-music"></i> Abrir Invitación
+            </button>
+        </div>
+    </div>
+
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md border-b border-gold-200/60 transition-all duration-300">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <a href="#home" class="font-serif text-xl sm:text-2xl text-gold-600 font-semibold tracking-wide hover:opacity-80 transition-opacity">
@@ -124,7 +138,7 @@
         </div>
     </section>
 
-    <!-- Sección: Nuestra Historia -->
+    <!-- Sección: Nuestra Historia / Canción -->
     <section id="history" class="py-20 bg-blush border-b border-gold-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-12">
@@ -132,6 +146,7 @@
                 <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mt-1">Nuestra Canción</h2>
                 <div class="w-16 h-0.5 bg-gold-300 mx-auto mt-4"></div>
             </div>
+            
             <!-- Native Audio Card Container -->
             <div class="bg-white p-8 rounded-3xl border border-gold-200/90 shadow-md flex flex-col items-center text-center max-w-xl mx-auto">
                 <div class="w-16 h-16 rounded-full bg-gold-100/70 text-gold-600 flex items-center justify-center text-2xl mb-4 shadow-inner">
@@ -141,7 +156,8 @@
                 <h3 class="font-serif text-2xl text-stone-800 mb-1">A Thousand Years</h3>
                 <p class="text-stone-500 text-xs uppercase tracking-widest mb-6 font-medium">Música de fondo</p>
 
-                <audio id="weddingAudio" controls autoplay loop class="w-full max-w-md accent-gold-500">
+                <!-- ID added for JavaScript player targeting -->
+                <audio id="weddingAudio" controls loop class="w-full max-w-md accent-gold-500" preload="auto">
                     <source src="music/A-Thousand-Years.m4a" type="audio/mp4">
                     <source src="music/A-Thousand-Years.m4a" type="audio/x-m4a">
                     Tu navegador no soporta el reproductor de audio.
@@ -268,18 +284,31 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Autoplay Fallback on First User Interaction
+        // ENTRY MODAL CLICK HANDLER: Triggers unmuted audio playback on user click
+        const enterBtn = document.getElementById('enterSiteBtn');
+        const modal = document.getElementById('welcomeModal');
         const audio = document.getElementById('weddingAudio');
-        
-        function playAudioOnInteraction() {
+
+        enterBtn.addEventListener('click', () => {
             if (audio) {
+                audio.play().catch(err => console.log("Playback interaction error:", err));
+            }
+            
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 700);
+        });
+
+        // Fallback: Also try starting music if user clicks or touches anywhere else
+        function playAudioOnInteraction() {
+            if (audio && audio.paused) {
                 audio.play().then(() => {
-                    // Remove listeners once audio successfully starts playing
                     document.removeEventListener('click', playAudioOnInteraction);
                     document.removeEventListener('touchstart', playAudioOnInteraction);
                     document.removeEventListener('scroll', playAudioOnInteraction);
                 }).catch(err => {
-                    console.log("Autoplay blocked waiting for user interaction:", err);
+                    console.log("Interaction required:", err);
                 });
             }
         }
