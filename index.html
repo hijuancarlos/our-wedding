@@ -267,6 +267,26 @@
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
+
+        // Autoplay Fallback on First User Interaction
+        const audio = document.getElementById('weddingAudio');
+        
+        function playAudioOnInteraction() {
+            if (audio) {
+                audio.play().then(() => {
+                    // Remove listeners once audio successfully starts playing
+                    document.removeEventListener('click', playAudioOnInteraction);
+                    document.removeEventListener('touchstart', playAudioOnInteraction);
+                    document.removeEventListener('scroll', playAudioOnInteraction);
+                }).catch(err => {
+                    console.log("Autoplay blocked waiting for user interaction:", err);
+                });
+            }
+        }
+
+        document.addEventListener('click', playAudioOnInteraction);
+        document.addEventListener('touchstart', playAudioOnInteraction);
+        document.addEventListener('scroll', playAudioOnInteraction);
     </script>
 </body>
 </html>
