@@ -55,6 +55,8 @@
             <p class="font-cursive text-3xl text-gold-600 mb-1">Bienvenidos</p>
             <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mb-4">Selene <span class="font-ampersand italic text-gold-500 font-normal">&</span> Juan Carlos</h2>
             <div class="w-12 h-0.5 bg-gold-300 mx-auto mb-6"></div>
+            <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mb-4">Yasmin <span class="font-ampersand italic text-gold-500 font-normal">&</span> German</h2>
+
             <p class="text-stone-500 text-xs uppercase tracking-widest mb-8 font-medium">Te invitamos a celebrar con nosotros</p>
             
             <button id="enterSiteBtn" class="bg-gold-500 hover:bg-gold-600 text-white font-sans text-xs uppercase tracking-widest px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 font-medium flex items-center gap-2">
@@ -76,6 +78,10 @@
                 <a href="#details" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Detalles</a>
                 <a href="#location" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Ubicación</a>
             </div>
+
+            <a href="#home" class="font-serif text-xl sm:text-2xl text-gold-600 font-semibold tracking-wide hover:opacity-80 transition-opacity">
+                Y <span class="font-ampersand italic text-gold-500 font-normal">&</span> G
+            </a>
         </div>
     </nav>
 
@@ -99,6 +105,10 @@
                 <div class="w-12 sm:w-20 h-px bg-gold-300"></div>
             </div>
 
+             <h1 class="font-serif text-5xl sm:text-7xl md:text-8xl text-stone-800 tracking-tight my-2 leading-none">
+                Yasmin <span class="font-ampersand italic text-gold-500 text-4xl sm:text-6xl md:text-7xl align-middle mx-1 font-normal">&</span> German
+            </h1>
+
             <p class="font-serif text-xl sm:text-3xl text-stone-700 tracking-wide mb-2">
                 Sábado, 22 de Abril de 2028
             </p>
@@ -112,7 +122,7 @@
         </div>
     </section>
 
-    <!-- SECTION: CUENTA REGRESIVA CON AÑOS Y MESES -->
+     <!-- SECTION: CUENTA REGRESIVA CON AÑOS Y MESES -->
     <section id="countdown" class="py-20 bg-white border-y border-gold-100 relative">
         <div class="max-w-5xl mx-auto px-4 text-center">
             <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mb-2">Cuenta Regresiva</h2>
@@ -165,6 +175,7 @@
                 <h3 class="font-serif text-2xl text-stone-800 mb-1">A Thousand Years</h3>
                 <p class="text-stone-500 text-xs uppercase tracking-widest mb-6 font-medium">Música de fondo</p>
 
+                <!-- ID added for JavaScript player targeting -->
                 <audio id="weddingAudio" controls loop class="w-full max-w-md accent-gold-500" preload="auto">
                     <source src="music/A-Thousand-Years.m4a" type="audio/mp4">
                     <source src="music/A-Thousand-Years.m4a" type="audio/x-m4a">
@@ -257,12 +268,12 @@
     </section>
 
     <footer class="py-12 bg-blush text-center border-t border-gold-100">
-        <p class="font-serif text-3xl text-gold-600">Selene <span class="font-ampersand italic text-2xl text-gold-500">&</span> Juan Carlos</p>
+        <p class="font-serif text-3xl text-gold-600">Selene <span class="font-ampersand italic text-2xl text-gold-500">&</span> Juan Carlos  |  Yasmin <span class="font-ampersand italic text-2xl text-gold-500">&</span> German</p>
         <p class="text-xs text-stone-400 tracking-widest uppercase mt-2 font-medium">22 de Abril de 2028 • Puebla, México</p>
         <p class="text-[10px] text-stone-300 uppercase tracking-widest mt-6">Con mucho amor</p>
     </footer>
 
-    <script>
+       <script>
         // Fecha del evento: 22 de Abril de 2028, 16:00:00
         const targetDate = new Date(2028, 3, 22, 16, 0, 0); // Mes 3 es Abril en JS (0 = Enero)
 
