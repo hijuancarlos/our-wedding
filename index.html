@@ -55,8 +55,6 @@
             <p class="font-cursive text-3xl text-gold-600 mb-1">Bienvenidos</p>
             <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mb-4">Selene <span class="font-ampersand italic text-gold-500 font-normal">&</span> Juan Carlos</h2>
             <div class="w-12 h-0.5 bg-gold-300 mx-auto mb-6"></div>
-            <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mb-4">Yasmin <span class="font-ampersand italic text-gold-500 font-normal">&</span> German</h2>
-
             <p class="text-stone-500 text-xs uppercase tracking-widest mb-8 font-medium">Te invitamos a celebrar con nosotros</p>
             
             <button id="enterSiteBtn" class="bg-gold-500 hover:bg-gold-600 text-white font-sans text-xs uppercase tracking-widest px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 font-medium flex items-center gap-2">
@@ -78,10 +76,6 @@
                 <a href="#details" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Detalles</a>
                 <a href="#location" class="hover:text-gold-600 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500 whitespace-nowrap">Ubicación</a>
             </div>
-
-            <a href="#home" class="font-serif text-xl sm:text-2xl text-gold-600 font-semibold tracking-wide hover:opacity-80 transition-opacity">
-                Y <span class="font-ampersand italic text-gold-500 font-normal">&</span> G
-            </a>
         </div>
     </nav>
 
@@ -105,10 +99,6 @@
                 <div class="w-12 sm:w-20 h-px bg-gold-300"></div>
             </div>
 
-             <h1 class="font-serif text-5xl sm:text-7xl md:text-8xl text-stone-800 tracking-tight my-2 leading-none">
-                Yasmin <span class="font-ampersand italic text-gold-500 text-4xl sm:text-6xl md:text-7xl align-middle mx-1 font-normal">&</span> German
-            </h1>
-
             <p class="font-serif text-xl sm:text-3xl text-stone-700 tracking-wide mb-2">
                 Sábado, 22 de Abril de 2028
             </p>
@@ -122,26 +112,35 @@
         </div>
     </section>
 
+    <!-- SECTION: CUENTA REGRESIVA CON AÑOS Y MESES -->
     <section id="countdown" class="py-20 bg-white border-y border-gold-100 relative">
-        <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="max-w-5xl mx-auto px-4 text-center">
             <h2 class="font-serif text-3xl sm:text-4xl text-stone-800 mb-2">Cuenta Regresiva</h2>
             <p class="text-xs uppercase tracking-widest text-gold-600 mb-12 font-medium">22 de Abril de 2028 • 16:00 HRS</p>
             
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto">
-                <div class="bg-blush p-6 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
-                    <span id="days" class="font-serif text-4xl sm:text-6xl text-stone-800 font-normal">00</span>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 max-w-4xl mx-auto">
+                <div class="bg-blush p-5 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
+                    <span id="years" class="font-serif text-3xl sm:text-5xl text-stone-800 font-normal">00</span>
+                    <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2 font-medium">Años</span>
+                </div>
+                <div class="bg-blush p-5 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
+                    <span id="months" class="font-serif text-3xl sm:text-5xl text-stone-800 font-normal">00</span>
+                    <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2 font-medium">Meses</span>
+                </div>
+                <div class="bg-blush p-5 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
+                    <span id="days" class="font-serif text-3xl sm:text-5xl text-stone-800 font-normal">00</span>
                     <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2 font-medium">Días</span>
                 </div>
-                <div class="bg-blush p-6 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
-                    <span id="hours" class="font-serif text-4xl sm:text-6xl text-stone-800 font-normal">00</span>
+                <div class="bg-blush p-5 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
+                    <span id="hours" class="font-serif text-3xl sm:text-5xl text-stone-800 font-normal">00</span>
                     <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2 font-medium">Horas</span>
                 </div>
-                <div class="bg-blush p-6 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
-                    <span id="minutes" class="font-serif text-4xl sm:text-6xl text-stone-800 font-normal">00</span>
+                <div class="bg-blush p-5 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
+                    <span id="minutes" class="font-serif text-3xl sm:text-5xl text-stone-800 font-normal">00</span>
                     <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2 font-medium">Minutos</span>
                 </div>
-                <div class="bg-blush p-6 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
-                    <span id="seconds" class="font-serif text-4xl sm:text-6xl text-stone-800 font-normal">00</span>
+                <div class="bg-blush p-5 rounded-2xl border border-gold-200/80 shadow-sm flex flex-col items-center justify-center">
+                    <span id="seconds" class="font-serif text-3xl sm:text-5xl text-stone-800 font-normal">00</span>
                     <span class="block text-xs uppercase tracking-widest text-gold-600 mt-2 font-medium">Segundos</span>
                 </div>
             </div>
@@ -166,7 +165,6 @@
                 <h3 class="font-serif text-2xl text-stone-800 mb-1">A Thousand Years</h3>
                 <p class="text-stone-500 text-xs uppercase tracking-widest mb-6 font-medium">Música de fondo</p>
 
-                <!-- ID added for JavaScript player targeting -->
                 <audio id="weddingAudio" controls loop class="w-full max-w-md accent-gold-500" preload="auto">
                     <source src="music/A-Thousand-Years.m4a" type="audio/mp4">
                     <source src="music/A-Thousand-Years.m4a" type="audio/x-m4a">
@@ -259,20 +257,21 @@
     </section>
 
     <footer class="py-12 bg-blush text-center border-t border-gold-100">
-        <p class="font-serif text-3xl text-gold-600">Selene <span class="font-ampersand italic text-2xl text-gold-500">&</span> Juan Carlos  |  Yasmin <span class="font-ampersand italic text-2xl text-gold-500">&</span> German</p>
+        <p class="font-serif text-3xl text-gold-600">Selene <span class="font-ampersand italic text-2xl text-gold-500">&</span> Juan Carlos</p>
         <p class="text-xs text-stone-400 tracking-widest uppercase mt-2 font-medium">22 de Abril de 2028 • Puebla, México</p>
         <p class="text-[10px] text-stone-300 uppercase tracking-widest mt-6">Con mucho amor</p>
     </footer>
 
     <script>
-        // Target wedding date: April 22, 2028, 16:00:00
-        const targetDate = new Date('April 22, 2028 16:00:00').getTime();
+        // Fecha del evento: 22 de Abril de 2028, 16:00:00
+        const targetDate = new Date(2028, 3, 22, 16, 0, 0); // Mes 3 es Abril en JS (0 = Enero)
 
         function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-
-            if (distance < 0) {
+            const now = new Date();
+            
+            if (now >= targetDate) {
+                document.getElementById('years').innerText = '00';
+                document.getElementById('months').innerText = '00';
                 document.getElementById('days').innerText = '00';
                 document.getElementById('hours').innerText = '00';
                 document.getElementById('minutes').innerText = '00';
@@ -280,11 +279,36 @@
                 return;
             }
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Cálculo preciso de años y meses por calendario
+            let years = targetDate.getFullYear() - now.getFullYear();
+            let months = targetDate.getMonth() - now.getMonth();
+            let tempDate = new Date(now.getFullYear() + years, now.getMonth() + months, now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds());
 
+            if (tempDate > targetDate) {
+                months--;
+                if (months < 0) {
+                    months += 12;
+                    years--;
+                }
+            }
+
+            // Fecha intermedia ajustada con años y meses exactos
+            const currentPeriodStart = new Date(now.getFullYear() + years, now.getMonth() + months, now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds());
+            let remainingMs = targetDate.getTime() - currentPeriodStart.getTime();
+
+            const days = Math.floor(remainingMs / (1000 * 60 * 60 * 24));
+            remainingMs %= (1000 * 60 * 60 * 24);
+
+            const hours = Math.floor(remainingMs / (1000 * 60 * 60));
+            remainingMs %= (1000 * 60 * 60);
+
+            const minutes = Math.floor(remainingMs / (1000 * 60));
+            remainingMs %= (1000 * 60);
+
+            const seconds = Math.floor(remainingMs / 1000);
+
+            document.getElementById('years').innerText = String(years).padStart(2, '0');
+            document.getElementById('months').innerText = String(months).padStart(2, '0');
             document.getElementById('days').innerText = String(days).padStart(2, '0');
             document.getElementById('hours').innerText = String(hours).padStart(2, '0');
             document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
@@ -294,14 +318,14 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // ENTRY MODAL CLICK HANDLER: Triggers unmuted audio playback on user click
+        // REPRODUCCIÓN AUTOMÁTICA AL ABRIR LA INVITACIÓN
         const enterBtn = document.getElementById('enterSiteBtn');
         const modal = document.getElementById('welcomeModal');
         const audio = document.getElementById('weddingAudio');
 
         enterBtn.addEventListener('click', () => {
             if (audio) {
-                audio.play().catch(err => console.log("Playback interaction error:", err));
+                audio.play().catch(err => console.log("Error al reproducir audio:", err));
             }
             
             modal.classList.add('opacity-0', 'pointer-events-none');
@@ -310,7 +334,6 @@
             }, 700);
         });
 
-        // Fallback: Also try starting music if user clicks or touches anywhere else
         function playAudioOnInteraction() {
             if (audio && audio.paused) {
                 audio.play().then(() => {
@@ -318,7 +341,7 @@
                     document.removeEventListener('touchstart', playAudioOnInteraction);
                     document.removeEventListener('scroll', playAudioOnInteraction);
                 }).catch(err => {
-                    console.log("Interaction required:", err);
+                    console.log("Se requiere interacción directa:", err);
                 });
             }
         }
